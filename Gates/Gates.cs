@@ -15,8 +15,8 @@ namespace Gates
         private Uri uri = new Uri("amqps://avfepwdu:SS4fTAg36RK1hPQAUnyC6TH-4Mf3uyJo@fox.rmq.cloudamqp.com/avfepwdu"); //TODO
 
         private const string CheckInToGatesQueue = "GatePlacement";
-        private const string VihiclesToGatesQueue = "PassengersRequest";
-        private const string GatesToVihiclesQueue = "Passengers";
+        private const string VihiclesToGatesQueue = "passengersRequest";
+        private const string GatesToVihiclesQueue = "passengers";
 
         private EventingBasicConsumer checkInConsumer;
         private EventingBasicConsumer vihicleConsumer;

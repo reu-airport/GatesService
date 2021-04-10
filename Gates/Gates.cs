@@ -25,7 +25,12 @@ namespace Gates
 
         public Gates()
         {
-            var factory = new ConnectionFactory() { Uri = uri };
+            var factory = new ConnectionFactory()
+            {
+                HostName = "206.189.60.128",
+                UserName = "guest",
+                Password = "guest"
+            };
 
             connection = factory.CreateConnection();
             channel = connection.CreateModel();

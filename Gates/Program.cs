@@ -8,9 +8,7 @@ namespace Gates
         {
             var gates = new Gates();
 
-            Console.ReadLine();
-
-            gates.Dispose();
+            gates.StartListening();
         }
     }
 }

@@ -7,7 +7,7 @@ using RabbitMQ.Client.Events;
 
 namespace Gates
 {
-    public class Gates :IDisposable
+    public class Gates
     {
         private IConnection connection;
         private IModel channel;
@@ -90,8 +90,12 @@ namespace Gates
             channel.BasicConsume(VihiclesToGatesQueue, true, vihicleConsumer);
         }
 
-        public void Dispose()
+        public void StartListening()
         {
+            Console.WriteLine($"[{DateTime.Now}] Start listening");
+
+            Console.ReadLine();
+
             channel.Close();
             connection.Close();
         }
